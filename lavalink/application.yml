@@ -12,15 +12,7 @@ plugins:
     allowDirectPlaylistIds: true
     clients:
       - MUSIC
-      - ANDROID_TESTSUITE
       - WEB
-      - TVHTML5EMBEDDED
-    WEB:
-      playback: false
-    TVHTML5EMBEDDED:
-      playlistLoading: false
-      videoLoading: false
-      searching: false
 
   lavasrc:
     providers:
@@ -84,13 +76,6 @@ plugins:
       - soundcloud
 
 lavalink:
-  plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.2"
-      snapshot: false
-    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.3"
-      snapshot: false
-    - dependency: "com.github.topi314.lavasearch:lavasearch-plugin:1.0.0"
-      snapshot: false
   server:
     password: "${LAVALINK_SERVER_PASSWORD:youshallnotpass}"
     sources:
@@ -116,13 +101,10 @@ lavalink:
     bufferDurationMs: 400
     frameBufferDurationMs: 5000
     opusEncodingQuality: 10
-    resamplingQuality: LOW
+    resamplingQuality: MEDIUM
     trackStuckThresholdMs: 10000
     useSeekGhosting: true
-    youtubePlaylistLoadLimit: 6
     playerUpdateInterval: 5
-    youtubeSearchEnabled: true
-    soundcloudSearchEnabled: true
     gc-warnings: true
 
 metrics:
