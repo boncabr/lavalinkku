@@ -1,5 +1,43 @@
 # Lavalink Server
 
+## Deploy ke Railway
+
+1. [railway.app](https://railway.app) → **New Project** → **Deploy from GitHub repo** → pilih repo ini
+2. Railway otomatis deteksi `Dockerfile`
+3. Set variable berikut di **Settings → Variables**
+
+### Variable Wajib
+
+| Variable | Contoh | Keterangan |
+|---|---|---|
+| `SERVER_PORT` | `2333` | Port Lavalink |
+| `LAVALINK_SERVER_PASSWORD` | `password123` | Password untuk bot konek |
+
+### Variable Opsional (source tambahan)
+
+| Variable | Keterangan |
+|---|---|
+| `SPOTIFY_CLIENT_ID` | Spotify App Client ID |
+| `SPOTIFY_CLIENT_SECRET` | Spotify App Client Secret |
+| `DEEZER_MASTER_KEY` | Deezer decryption key |
+| `DEEZER_ARL` | Deezer ARL token |
+| `APPLE_MUSIC_TOKEN` | Apple Music media token |
+| `YANDEX_MUSIC_TOKEN` | Yandex Music access token |
+| `VK_USER_TOKEN` | VK Music user token |
+| `TIDAL_COUNTRY_CODE` | Kode negara Tidal (default: `US`) |
+
+### Koneksi Bot Setelah Deploy
+
+```js
+host: "xxx.railway.app"
+port: 443
+password: "LAVALINK_SERVER_PASSWORD_yang_kamu_set"
+secure: true
+```
+
+---
+
+
 ## Versi
 - **Lavalink**: 4.2.2
 - **youtube-plugin**: 1.18.2
