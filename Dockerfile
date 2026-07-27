@@ -1,9 +1,9 @@
-FROM eclipse-temurin:19-jre-alpine
+FROM eclipse-temurin:19-jre
 
 WORKDIR /lavalink
 
 # Download Lavalink dan plugins saat build
-RUN apk add --no-cache curl && \
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/* && \
     curl -L -o Lavalink.jar \
       "https://github.com/lavalink-devs/Lavalink/releases/download/4.2.2/Lavalink.jar" && \
     mkdir -p plugins && \
