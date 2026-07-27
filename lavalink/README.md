@@ -10,7 +10,6 @@
 
 | Variable | Contoh | Keterangan |
 |---|---|---|
-| `SERVER_PORT` | `2333` | Port Lavalink |
 | `LAVALINK_SERVER_PASSWORD` | `password123` | Password untuk bot konek |
 
 ### Variable Opsional (source tambahan)
